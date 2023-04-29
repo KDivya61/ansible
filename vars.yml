@@ -2,8 +2,8 @@ name : Play Variables
 hosts: all
 connection: local
 vars:
-    URL = play.link.com
-    tasks:
+    Link: play.Exmples.com
+ tasks:
         name : print URL
         ansible.builtin.debug:
-        msg: URL = {{URL}}
+        msg: Link = {{Link}}
