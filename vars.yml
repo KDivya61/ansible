@@ -1,5 +1,6 @@
 name : Play Variables
 hosts: all
+connection : local
 vars:
     Link = play.link.com
     tasks:
