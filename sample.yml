@@ -1,6 +1,7 @@
 name : Demo play 1
-hosts : all
+hosts : localhost
 tasks :
         name: print HEllo
-        ansible.builtin.debug: 
-        msg: Hello brother!!
+        ansible.builtin.debug:  #this is the module we are using.
+        msg: Hello brother!! How you doin
+        
