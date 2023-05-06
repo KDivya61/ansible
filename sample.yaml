@@ -3,5 +3,20 @@ hosts: localhost
 tasks:
         name: print HEllo
         ansible.builtin.debug:  #this is the module we are using.
+        
         msg: Hello brother!! How you doin
         
+name: Register a variable
+hosts: localhost
+tasks:
+        name: print uptime
+        ansible.builtin.debug: uptime #uptime gives a value and stored it and prints it via ansible
+        register: out #declaring runtime variable.
+        
+        name: print HEllo
+        ansible.builtin.debug:
+        msg: "{{ out }}" //printing the registered variable data
+        
+        name: print HEllo
+        ansible.builtin.set_fact: # setfact varible EX
+        status: "{{ out.rc }}"
